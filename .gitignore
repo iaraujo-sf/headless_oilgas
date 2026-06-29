@@ -8,7 +8,6 @@ Thumbs.db
 *~
 
 # Large media (track with Git LFS if needed)
-*.mp4
 *.mov
 *.avi
 *.wmv
