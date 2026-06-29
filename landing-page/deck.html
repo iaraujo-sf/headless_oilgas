@@ -1553,7 +1553,204 @@
             font-style: italic;
         }
 
-        /* --- SLIDE 8: SEGURANÇA & GOVERNANÇA --- */
+        /* --- SLIDE 8: SLACK COCKPIT --- */
+        .slide-slack .content {
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .slide-slack h2 {
+            font-size: clamp(22px, 2.8vw, 38px);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .slide-slack .slack-subtitle {
+            font-size: clamp(12px, 1.1vw, 15px);
+            color: var(--cloud-blue-80);
+            text-align: center;
+            font-weight: 300;
+        }
+        .slack-main {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 16px;
+            flex: 1;
+            min-height: 0;
+        }
+        .slack-chat {
+            background: rgba(0,30,91,0.5);
+            border: 1px solid rgba(6,106,254,0.25);
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow: hidden;
+        }
+        .slack-chat-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(6,106,254,0.2);
+        }
+        .slack-chat-header img {
+            height: 24px;
+            border-radius: 4px;
+        }
+        .slack-chat-header span {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--white);
+        }
+        .slack-chat-header .slack-channel {
+            font-size: 11px;
+            color: var(--cloud-blue-80);
+            margin-left: auto;
+        }
+        .slack-msg {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .slack-msg-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: rgba(6,106,254,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .slack-msg-avatar.bot {
+            background: linear-gradient(135deg, var(--electric-blue-50), var(--cloud-blue-68));
+        }
+        .slack-msg-body {
+            flex: 1;
+        }
+        .slack-msg-name {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 2px;
+        }
+        .slack-msg-name .slack-bot-badge {
+            font-size: 9px;
+            background: rgba(6,106,254,0.3);
+            color: var(--cloud-blue-68);
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin-left: 6px;
+            font-weight: 500;
+        }
+        .slack-msg-text {
+            font-size: clamp(10px, 0.9vw, 12px);
+            color: var(--cloud-blue-80);
+            line-height: 1.4;
+        }
+        .slack-msg-text code {
+            background: rgba(6,106,254,0.15);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            color: var(--cloud-blue-68);
+        }
+        .slack-msg-action {
+            margin-top: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            background: rgba(6,106,254,0.12);
+            border: 1px solid rgba(6,106,254,0.3);
+            border-radius: 5px;
+            font-size: 10px;
+            color: var(--cloud-blue-68);
+        }
+        .slack-right {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .slack-card {
+            background: rgba(0,30,91,0.45);
+            border: 1px solid rgba(6,106,254,0.25);
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .slack-card-title {
+            font-size: clamp(10px, 0.85vw, 12px);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--cloud-blue-68);
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(6,106,254,0.2);
+        }
+        .slack-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 8px;
+            background: rgba(6,106,254,0.06);
+            border-radius: 6px;
+        }
+        .slack-feature-icon {
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .slack-feature-text {
+            font-size: clamp(9px, 0.8vw, 11px);
+            color: var(--white);
+        }
+        .slack-feature-text span {
+            display: block;
+            font-size: clamp(8px, 0.65vw, 9px);
+            color: var(--cloud-blue-80);
+            margin-top: 1px;
+        }
+        .slack-bottom {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        .slack-stat {
+            text-align: center;
+            padding: 8px;
+            background: rgba(6,106,254,0.08);
+            border-radius: 8px;
+            border: 1px solid rgba(6,106,254,0.2);
+        }
+        .slack-stat-value {
+            font-family: 'AvantGarde', sans-serif;
+            font-size: clamp(16px, 1.8vw, 24px);
+            color: var(--cloud-blue-68);
+        }
+        .slack-stat-label {
+            font-size: clamp(8px, 0.7vw, 10px);
+            color: var(--cloud-blue-80);
+            margin-top: 2px;
+        }
+        .slack-source {
+            text-align: center;
+            font-size: clamp(8px, 0.65vw, 9px);
+            color: var(--white);
+            font-style: italic;
+        }
+
+        /* --- SLIDE 9: SEGURANÇA & GOVERNANÇA --- */
         .slide-security .content {
             width: 100%;
             max-width: 1400px;
@@ -2944,24 +3141,29 @@
                         <span class="agenda-item-title" data-i18n="agenda-6">Vibe Code: descreva, a plataforma constrói</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
-                    <div class="agenda-item slide-el slide-el-delay-4" onclick="goToSlideByClass('slide-security')">
+                    <div class="agenda-item slide-el slide-el-delay-3" onclick="goToSlideByClass('slide-slack')">
                         <span class="agenda-item-num">07</span>
-                        <span class="agenda-item-title" data-i18n="agenda-7">Segurança & Governança</span>
+                        <span class="agenda-item-title" data-i18n="agenda-7">Slack: cockpit único da operação</span>
+                        <span class="agenda-item-arrow">→</span>
+                    </div>
+                    <div class="agenda-item slide-el slide-el-delay-4" onclick="goToSlideByClass('slide-security')">
+                        <span class="agenda-item-num">08</span>
+                        <span class="agenda-item-title" data-i18n="agenda-8">Segurança & Governança</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-4" onclick="goToSlideByClass('slide-scenarios')">
-                        <span class="agenda-item-num">08</span>
-                        <span class="agenda-item-title" data-i18n="agenda-8">Dores reais, caminhos concretos</span>
+                        <span class="agenda-item-num">09</span>
+                        <span class="agenda-item-title" data-i18n="agenda-9">Dores reais, caminhos concretos</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-5" onclick="goToSlideByClass('slide-tco')">
-                        <span class="agenda-item-num">09</span>
-                        <span class="agenda-item-title" data-i18n="agenda-9">Customer Success: quem já opera Headless</span>
+                        <span class="agenda-item-num">10</span>
+                        <span class="agenda-item-title" data-i18n="agenda-10">Customer Success: quem já opera Headless</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-5" onclick="goToSlideByClass('slide-governance')">
-                        <span class="agenda-item-num">10</span>
-                        <span class="agenda-item-title" data-i18n="agenda-10">Governança Profunda: IA + Headless</span>
+                        <span class="agenda-item-num">11</span>
+                        <span class="agenda-item-title" data-i18n="agenda-11">Governança Profunda: IA + Headless</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                 </div>
@@ -3625,7 +3827,135 @@
             </div>
         </section>
 
-        <!-- SLIDE 8: SEGURANÇA & GOVERNANÇA -->
+        <!-- SLIDE 8: SLACK COMO COCKPIT -->
+        <section class="slide slide-slack bg-evening">
+            <img src="assets/sparkles/Sparkles Blue Main.svg" class="sparkle" style="top:5%;left:3%;width:36px;transform:rotate(8deg)" aria-hidden="true">
+            <img src="assets/sparkles/Sparkles Yellow Inclined 2.svg" class="sparkle" style="top:9%;right:3%;width:32px;transform:rotate(-14deg)" aria-hidden="true">
+            <img src="assets/sparkles/Sparkles Blue Inclined.svg" class="sparkle" style="bottom:10%;left:2%;width:28px;transform:rotate(20deg)" aria-hidden="true">
+            <img src="assets/sparkles/Sparkles Yellow Main.svg" class="sparkle" style="bottom:7%;right:4%;width:34px;transform:rotate(-10deg)" aria-hidden="true">
+
+            <div class="content">
+                <h2 class="slide-el" data-i18n="s8s-title">Slack: o cockpit único da operação</h2>
+                <p class="slack-subtitle slide-el slide-el-delay-1" data-i18n="s8s-subtitle">Um SO agêntico — mobile e desktop. O vendedor não abre Salesforce. Ele opera de onde já está.</p>
+
+                <div class="slack-main slide-el slide-el-delay-2">
+                    <!-- LEFT: Chat simulation -->
+                    <div class="slack-chat">
+                        <div class="slack-chat-header">
+                            <img src="assets/logos/Slack.png" alt="Slack">
+                            <span>Agentforce Bot</span>
+                            <span class="slack-channel">#vendas-campo-sp</span>
+                        </div>
+                        <div class="slack-msg">
+                            <div class="slack-msg-avatar">👤</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-msg-name">Carlos (Vendedor)</div>
+                                <div class="slack-msg-text">Preciso do preço atualizado de diesel S-10 para o Posto Estrela, contrato bulk, entrega sexta</div>
+                            </div>
+                        </div>
+                        <div class="slack-msg">
+                            <div class="slack-msg-avatar bot">🤖</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-msg-name">Agentforce <span class="slack-bot-badge">BOT</span></div>
+                                <div class="slack-msg-text">Consultei pricing engine + estoque: <code>R$ 4,87/L</code> (contrato bulk vigente, margem 12.3%). Prazo logístico confirmado para sexta (base Paulínia → Posto Estrela, 142km).</div>
+                                <div class="slack-msg-action">✅ Aprovar e gerar pedido</div>
+                            </div>
+                        </div>
+                        <div class="slack-msg">
+                            <div class="slack-msg-avatar">👤</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-msg-name">Carlos (Vendedor)</div>
+                                <div class="slack-msg-text">Aprova. E agenda visita pro posto Rio Branco semana que vem</div>
+                            </div>
+                        </div>
+                        <div class="slack-msg">
+                            <div class="slack-msg-avatar bot">🤖</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-msg-name">Agentforce <span class="slack-bot-badge">BOT</span></div>
+                                <div class="slack-msg-text">Pedido <code>#ORD-44921</code> criado. Visita agendada terça 10h (Rio Branco, contato Sr. Mendes). Notifiquei logística no <code>#supply-chain-sp</code>.</div>
+                                <div class="slack-msg-action">📋 Ver pedido no SF</div>
+                            </div>
+                        </div>
+                        <div class="slack-msg">
+                            <div class="slack-msg-avatar bot">🤖</div>
+                            <div class="slack-msg-body">
+                                <div class="slack-msg-name">Agentforce <span class="slack-bot-badge">BOT</span></div>
+                                <div class="slack-msg-text">⚠️ Alerta: Posto Estrela atingiu 85% do volume contratual. Sugestão: iniciar renegociação antes do vencimento (14/jul). Quer que eu prepare a proposta?</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Features & capabilities -->
+                    <div class="slack-right">
+                        <div class="slack-card">
+                            <div class="slack-card-title">Slackbot Agentforce — O que opera</div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">💰</span>
+                                <div class="slack-feature-text">Consulta pricing em tempo real<span>Pricing Engine + regras ANP via API</span></div>
+                            </div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">📦</span>
+                                <div class="slack-feature-text">Cria pedidos e ordens de entrega<span>Order Management + logística integrada</span></div>
+                            </div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">📊</span>
+                                <div class="slack-feature-text">Relatórios e dashboards sob demanda<span>Data Cloud → Tableau Pulse via Slack</span></div>
+                            </div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">🔔</span>
+                                <div class="slack-feature-text">Alertas proativos de contrato e estoque<span>Platform Events → Slack Workflow</span></div>
+                            </div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">✅</span>
+                                <div class="slack-feature-text">Aprovações com um clique<span>Approval Process exposto como Slack Action</span></div>
+                            </div>
+                        </div>
+
+                        <div class="slack-card">
+                            <div class="slack-card-title">Por que Slack = Headless perfeito</div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">📱</span>
+                                <div class="slack-feature-text">Mobile-first sem app customizado<span>iOS/Android nativo — vendedor opera do bolso</span></div>
+                            </div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">🔗</span>
+                                <div class="slack-feature-text">Canais = contexto compartilhado<span>Vendas, supply chain, compliance num lugar</span></div>
+                            </div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">🧠</span>
+                                <div class="slack-feature-text">Agentes operam em linguagem natural<span>Sem treinamento, sem UI complexa</span></div>
+                            </div>
+                            <div class="slack-feature">
+                                <span class="slack-feature-icon">🔒</span>
+                                <div class="slack-feature-text">Governança herdada do core<span>FLS, sharing rules, audit trail — tudo enforced</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slack-bottom">
+                    <div class="slack-stat">
+                        <div class="slack-stat-value">47%</div>
+                        <div class="slack-stat-label">redução no tempo de ciclo de vendas com Slack + Agentforce</div>
+                    </div>
+                    <div class="slack-stat">
+                        <div class="slack-stat-value">Zero</div>
+                        <div class="slack-stat-label">apps custom para manter — Slack já está no dispositivo</div>
+                    </div>
+                    <div class="slack-stat">
+                        <div class="slack-stat-value">3.2x</div>
+                        <div class="slack-stat-label">mais interações por vendedor/dia vs CRM tradicional</div>
+                    </div>
+                    <div class="slack-stat">
+                        <div class="slack-stat-value">Mobile</div>
+                        <div class="slack-stat-label">100% operacional — mesmo UX desktop e celular</div>
+                    </div>
+                </div>
+                <p class="slack-source" data-i18n="s8s-source">Fontes: Slack State of Work 2026 · Salesforce Agentforce + Slack Integration GA (TDX 2026)</p>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: SEGURANÇA & GOVERNANÇA -->
         <section class="slide slide-security bg-dusk">
             <img src="assets/sparkles/Sparkles Blue Main.svg" class="sparkle" style="top:6%;left:4%;width:44px;transform:rotate(10deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Yellow Main.svg" class="sparkle" style="top:10%;right:3%;width:52px;transform:rotate(-12deg)" aria-hidden="true">
@@ -4802,6 +5132,7 @@
         'Arquitetura Composável: 4 Camadas',
         'Integração com legado (SAP, ERPs)',
         'Vibe Code',
+        'Slack: cockpit único da operação',
         'Segurança & Governança',
         'Dores reais, caminhos concretos',
         'Customer Success',
@@ -5016,10 +5347,11 @@
         'agenda-4': 'Composable Architecture: 4 Layers',
         'agenda-5': 'Integration with legacy (SAP, ERPs)',
         'agenda-6': 'Vibe Code: describe it, the platform builds it',
-        'agenda-7': 'Security & Governance',
-        'agenda-8': 'Real pain points, concrete paths',
-        'agenda-9': 'Customer Success: who already runs Headless',
-        'agenda-10': 'Deep Governance: AI + Headless',
+        'agenda-7': 'Slack: single operations cockpit',
+        'agenda-8': 'Security & Governance',
+        'agenda-9': 'Real pain points, concrete paths',
+        'agenda-10': 'Customer Success: who already runs Headless',
+        'agenda-11': 'Deep Governance: AI + Headless',
         // SLIDE 11 GOVERNANCE
         's11g-title': 'Governance: uncontrolled AI is a liability, not an asset',
         's11g-subtitle': '3 guardrail layers · Semi-deterministic model · O&G compliance embedded · Audit trail down to conversation level',
@@ -5146,7 +5478,11 @@
         's7-foot-stat1': '80%',
         's7-foot-stat2': 'development acceleration',
         's7-foot-text': 'Source: Salesforce internal benchmarks, ADLC + Vibe Code pilots, 2026',
-        // SLIDE 8
+        // SLIDE 8: SLACK COCKPIT
+        's8s-title': 'Slack: the single operations cockpit',
+        's8s-subtitle': 'An agentic OS — mobile and desktop. The rep doesn\'t open Salesforce. They operate from where they already are.',
+        's8s-source': 'Sources: Slack State of Work 2026 · Salesforce Agentforce + Slack Integration GA (TDX 2026)',
+        // SLIDE 9: SECURITY
         's8-title': 'Security & Governance built-in',
         's8-subtitle': 'Every agent action is governed, audited, and limited — automatically.',
         's8-c1-title': 'Trust Layer',
