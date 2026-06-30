@@ -68,15 +68,19 @@
             font-family: 'Salesforce Sans', -apple-system, sans-serif;
             color: var(--white);
             background: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         h1, h2, h3 { font-family: 'AvantGarde', 'Salesforce Sans', sans-serif; }
 
         #deck {
-            width: 100vw;
-            height: 100dvh;
+            width: 1440px;
+            height: 810px;
             position: relative;
             overflow: hidden;
+            transform-origin: center center;
         }
 
         .slide {
@@ -86,7 +90,7 @@
             flex-direction: column;
             align-items: stretch;
             justify-content: flex-start;
-            padding: clamp(20px, 3vh, 32px) clamp(40px, 4vw, 64px);
+            padding: 28px 56px;
             overflow: hidden;
             opacity: 0;
             pointer-events: none;
@@ -117,7 +121,7 @@
 
         /* Navigation arrows */
         .nav-btn {
-            position: fixed;
+            position: absolute;
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255,255,255,0.08);
@@ -151,7 +155,7 @@
 
         /* Language toggle */
         .top-nav {
-            position: fixed;
+            position: absolute;
             top: 20px;
             right: 36px;
             display: flex;
@@ -192,7 +196,7 @@
         }
 
         .progress-bar {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             height: 3px;
@@ -203,7 +207,7 @@
         }
 
         .slide-counter {
-            position: fixed;
+            position: absolute;
             bottom: 32px;
             right: 40px;
             font-size: 13px;
@@ -215,7 +219,7 @@
 
         /* --- QUICK NAV MENU --- */
         .quick-nav-btn {
-            position: fixed;
+            position: absolute;
             bottom: 28px;
             left: 36px;
             width: 40px;
@@ -269,7 +273,7 @@
             transform: translateY(-6px) rotate(-45deg);
         }
         .quick-nav-overlay {
-            position: fixed;
+            position: absolute;
             inset: 0;
             background: rgba(0,11,46,0.88);
             backdrop-filter: blur(16px);
@@ -329,7 +333,7 @@
         }
 
         .deck-logo {
-            position: fixed;
+            position: absolute;
             top: 24px;
             left: 40px;
             height: 36px;
@@ -374,7 +378,7 @@
         }
         .slide-title .badge img { height: 18px; }
         .slide-title h1 {
-            font-size: clamp(42px, 6vw, 76px);
+            font-size: 76px;
             line-height: 1.05;
             margin-bottom: 24px;
             letter-spacing: -1px;
@@ -383,7 +387,7 @@
             color: var(--cloud-blue-80);
         }
         .slide-title .subtitle {
-            font-size: clamp(16px, 2vw, 22px);
+            font-size: 22px;
             font-weight: 300;
             color: var(--cloud-blue-80);
             max-width: 750px;
@@ -409,7 +413,7 @@
             gap: 20px;
         }
         .slide-agenda h2 {
-            font-size: clamp(26px, 3.2vw, 42px);
+            font-size: 42px;
             color: var(--white);
             text-align: center;
             margin-bottom: 4px;
@@ -440,14 +444,14 @@
         }
         .agenda-item-num {
             font-family: 'AvantGarde', sans-serif;
-            font-size: clamp(14px, 1.5vw, 18px);
+            font-size: 18px;
             color: var(--cloud-blue-68);
             width: 28px;
             text-align: center;
             flex-shrink: 0;
         }
         .agenda-item-title {
-            font-size: clamp(14px, 1.4vw, 18px);
+            font-size: 18px;
             font-weight: 600;
             color: var(--white);
             flex: 1;
@@ -468,7 +472,7 @@
             max-width: 1400px;
         }
         .slide-problems h2 {
-            font-size: clamp(28px, 3.5vw, 42px);
+            font-size: 42px;
             color: var(--white);
             line-height: 1.1;
             margin-bottom: 4px;
@@ -548,7 +552,7 @@
             align-items: center;
         }
         .slide-paradox h2 {
-            font-size: clamp(28px, 4vw, 48px);
+            font-size: 48px;
             color: var(--white);
             line-height: 1.1;
             margin-bottom: 24px;
@@ -639,7 +643,7 @@
             height: 100%;
         }
         .slide-before-after h2 {
-            font-size: clamp(24px, 3vw, 38px);
+            font-size: 38px;
             color: var(--white);
             margin-bottom: 8px;
             text-align: center;
@@ -821,7 +825,7 @@
             max-width: 1400px;
         }
         .slide-arch h2 {
-            font-size: clamp(24px, 3vw, 36px);
+            font-size: 36px;
             color: var(--electric-blue-15);
             margin-bottom: 6px;
             text-align: center;
@@ -922,22 +926,6 @@
             box-shadow: 0 2px 16px rgba(0,0,0,0.08);
             display: flex;
             flex-direction: column;
-        }
-        @media (max-width: 1100px) {
-            .arch-split { flex-direction: column; gap: 16px; }
-            .arch-explainer { width: 100%; min-width: unset; flex-direction: row; flex-wrap: wrap; gap: 8px; }
-            .arch-explainer-layer { flex: 1; min-width: 200px; }
-            .arch-explainer-quote { width: 100%; }
-            .sf-arch-diagram { font-size: 11px; }
-            .sf-arch-header { padding: 14px 18px; }
-            .sf-arch-header-title { font-size: 15px; }
-        }
-        @media (max-width: 900px) {
-            .arch-explainer-layer { min-width: 140px; }
-            .sf-arch-layer-content { padding: 8px 12px; }
-            .sf-arch-item { padding: 8px 10px; }
-            .sf-arch-item-name { font-size: 10px; }
-            .sf-arch-item-desc { font-size: 8px; }
         }
         .sf-arch-header {
             display: flex;
@@ -1093,14 +1081,6 @@
             font-style: italic;
             flex-shrink: 0;
         }
-        @media (max-width: 768px) {
-            .sf-arch-layer { flex-direction: column; }
-            .sf-arch-layer-label { width: 100%; min-width: unset; padding: 8px; }
-            .sf-arch-layer-content { padding: 10px; }
-            .sf-arch-legend { grid-template-columns: repeat(2, auto); }
-            .sf-arch-header { flex-direction: column; gap: 12px; }
-            .sf-arch-header-left { max-width: 100%; }
-        }
 
         /* --- SLIDE 6: INTEGRAÇÃO COM LEGADO --- */
         .slide-integration .content {
@@ -1108,7 +1088,7 @@
             max-width: 1400px;
         }
         .slide-integration h2 {
-            font-size: clamp(24px, 3vw, 38px);
+            font-size: 38px;
             color: var(--white);
             margin-bottom: 8px;
             text-align: center;
@@ -1359,12 +1339,6 @@
             border-top: 1px solid var(--gray-80);
             flex-shrink: 0;
         }
-        @media (max-width: 900px) {
-            .int-split { flex-direction: column; gap: 16px; }
-            .int-checklist { width: 100%; min-width: unset; }
-            .sf-int-body { grid-template-columns: 1fr; gap: 12px; }
-            .sf-int-arrow { transform: rotate(90deg); }
-        }
 
         /* --- SLIDE 7: VIBE CODE --- */
         .slide-vibe .content {
@@ -1375,13 +1349,13 @@
             gap: 20px;
         }
         .slide-vibe h2 {
-            font-size: clamp(24px, 3vw, 36px);
+            font-size: 36px;
             color: var(--white);
             line-height: 1.1;
             text-align: center;
         }
         .slide-vibe .vibe-subtitle {
-            font-size: clamp(14px, 1.4vw, 20px);
+            font-size: 20px;
             color: var(--cloud-blue-80);
             line-height: 1.6;
             max-width: 720px;
@@ -1402,19 +1376,19 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: clamp(14px, 2vw, 24px) clamp(10px, 1.2vw, 18px);
+            padding: 24px 18px;
             position: relative;
             border-radius: 14px;
             background: rgba(0,30,91,0.5);
             border: 1px solid rgba(6,106,254,0.2);
         }
         .vibe-stage-num {
-            width: clamp(28px, 2.5vw, 40px);
-            height: clamp(28px, 2.5vw, 40px);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: var(--electric-blue-50);
             color: var(--white);
-            font-size: clamp(12px, 1.2vw, 18px);
+            font-size: 18px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -1422,13 +1396,13 @@
             margin-bottom: 10px;
         }
         .vibe-stage-title {
-            font-size: clamp(13px, 1.3vw, 20px);
+            font-size: 20px;
             font-weight: 700;
             color: var(--white);
             margin-bottom: 6px;
         }
         .vibe-stage-how {
-            font-size: clamp(11px, 1.1vw, 16px);
+            font-size: 16px;
             color: var(--cloud-blue-68);
             font-weight: 600;
             margin-bottom: 8px;
@@ -1438,7 +1412,7 @@
             display: inline-block;
         }
         .vibe-stage-desc {
-            font-size: clamp(11px, 1.1vw, 16px);
+            font-size: 16px;
             color: var(--cloud-blue-80);
             line-height: 1.5;
         }
@@ -1447,7 +1421,7 @@
             display: flex;
             align-items: center;
             padding: 0 6px;
-            font-size: clamp(18px, 2vw, 28px);
+            font-size: 28px;
             color: var(--cloud-blue-68);
             flex-shrink: 0;
         }
@@ -1460,7 +1434,7 @@
         .vibe-usecase {
             flex: 1;
             min-width: 200px;
-            padding: clamp(14px, 1.5vw, 22px) clamp(14px, 1.5vw, 22px);
+            padding: 22px 22px;
             border-radius: 12px;
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(6,106,254,0.25);
@@ -1480,13 +1454,13 @@
             animation-play-state: paused;
         }
         .vibe-usecase-title {
-            font-size: clamp(13px, 1.2vw, 18px);
+            font-size: 18px;
             font-weight: 700;
             color: var(--white);
             margin-bottom: 4px;
         }
         .vibe-usecase-desc {
-            font-size: clamp(11px, 1.1vw, 15px);
+            font-size: 15px;
             color: var(--cloud-blue-80);
             line-height: 1.4;
         }
@@ -1499,17 +1473,17 @@
             border-top: 1px solid rgba(255,255,255,0.08);
         }
         .vibe-usecase-platforms img {
-            width: clamp(16px, 1.5vw, 24px);
-            height: clamp(16px, 1.5vw, 24px);
+            width: 24px;
+            height: 24px;
             border-radius: 4px;
         }
         .vibe-usecase-platforms span {
-            font-size: clamp(9px, 0.9vw, 13px);
+            font-size: 13px;
             color: var(--gray-60);
             margin-left: 2px;
         }
         .vibe-usecase-time {
-            font-size: clamp(10px, 1vw, 14px);
+            font-size: 14px;
             font-weight: 700;
             color: var(--green);
             margin-top: 6px;
@@ -1517,8 +1491,8 @@
         .vibe-footer {
             display: flex;
             align-items: center;
-            gap: clamp(16px, 2vw, 32px);
-            padding: clamp(12px, 1.5vw, 20px) clamp(16px, 2vw, 32px);
+            gap: 32px;
+            padding: 20px 32px;
             background: rgba(6,106,254,0.1);
             border: 1px solid rgba(6,106,254,0.25);
             border-radius: 12px;
@@ -1528,12 +1502,12 @@
         }
         .vibe-footer-stat-value {
             font-family: 'AvantGarde', sans-serif;
-            font-size: clamp(20px, 2.2vw, 32px);
+            font-size: 32px;
             color: var(--cloud-blue-68);
             font-weight: 700;
         }
         .vibe-footer-stat-label {
-            font-size: clamp(10px, 1vw, 14px);
+            font-size: 14px;
             color: var(--cloud-blue-80);
         }
         .vibe-footer-divider {
@@ -1543,7 +1517,7 @@
         }
         .vibe-footer-text {
             flex: 1;
-            font-size: clamp(12px, 1.2vw, 17px);
+            font-size: 17px;
             color: var(--white);
             line-height: 1.5;
         }
@@ -1571,12 +1545,12 @@
         }
         .slack-header img { height: 28px; }
         section.slide.slide-slack h2 {
-            font-size: clamp(22px, 2.8vw, 38px);
+            font-size: 38px;
             color: #fff;
             margin-bottom: 0;
         }
         .slack-subtitle {
-            font-size: clamp(11px, 1vw, 14px);
+            font-size: 14px;
             color: rgba(255,255,255,0.65);
             text-align: center;
             font-weight: 300;
@@ -1599,7 +1573,7 @@
             min-height: 0;
         }
         .slack-card {
-            padding: clamp(8px, 0.9vw, 14px);
+            padding: 14px;
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.12);
             border-radius: 10px;
@@ -1616,13 +1590,13 @@
             margin-bottom: 2px;
         }
         .slack-card-title {
-            font-size: clamp(12px, 1.1vw, 16px);
+            font-size: 16px;
             font-weight: 700;
             color: #fff;
             line-height: 1.2;
         }
         .slack-card-desc {
-            font-size: clamp(10px, 0.85vw, 13px);
+            font-size: 13px;
             color: rgba(255,255,255,0.75);
             line-height: 1.4;
         }
@@ -1669,7 +1643,7 @@
             display: flex;
             align-items: flex-start;
             gap: 10px;
-            font-size: clamp(11px, 1vw, 14px);
+            font-size: 14px;
             color: #2b2b2b;
             line-height: 1.45;
         }
@@ -1681,7 +1655,7 @@
         }
         .slack-source {
             text-align: center;
-            font-size: clamp(7px, 0.55vw, 8px);
+            font-size: 8px;
             color: rgba(0,0,0,0.3);
             font-style: italic;
             flex: none;
@@ -1693,14 +1667,14 @@
             max-width: 1400px;
         }
         .slide-security h2 {
-            font-size: clamp(28px, 3.5vw, 44px);
+            font-size: 44px;
             color: var(--white);
             margin-bottom: 8px;
             text-align: center;
             line-height: 1.2;
         }
         .slide-security .sec-subtitle {
-            font-size: clamp(14px, 1.3vw, 18px);
+            font-size: 18px;
             color: var(--cloud-blue-80);
             margin-bottom: 24px;
             text-align: center;
@@ -1741,13 +1715,13 @@
         .sec-card-content { flex: 1; }
         .sec-card-title {
             font-family: 'Salesforce Sans', sans-serif;
-            font-size: clamp(14px, 1.3vw, 18px);
+            font-size: 18px;
             font-weight: 700;
             color: var(--white);
             margin-bottom: 6px;
         }
         .sec-card-desc {
-            font-size: clamp(12px, 1.1vw, 15px);
+            font-size: 15px;
             color: var(--cloud-blue-80);
             line-height: 1.5;
         }
@@ -1771,7 +1745,7 @@
             border: 2px solid rgba(46,132,74,0.4);
         }
         .sec-comp-title {
-            font-size: clamp(10px, 1vw, 13px);
+            font-size: 13px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -1781,17 +1755,17 @@
         .sec-comp-platform .sec-comp-title { color: var(--green); }
         .sec-comp-value {
             font-family: 'AvantGarde', sans-serif;
-            font-size: clamp(32px, 3.5vw, 52px);
+            font-size: 52px;
             margin-bottom: 4px;
         }
         .sec-comp-custom .sec-comp-value { color: var(--orange); }
         .sec-comp-platform .sec-comp-value { color: var(--green); }
         .sec-comp-label {
-            font-size: clamp(11px, 1.1vw, 15px);
+            font-size: 15px;
             color: var(--cloud-blue-80);
         }
         .sec-comp-source {
-            font-size: clamp(9px, 0.8vw, 11px);
+            font-size: 11px;
             color: var(--gray-60);
             font-style: italic;
             margin-top: 6px;
@@ -1803,13 +1777,13 @@
             max-width: 1400px;
         }
         .slide-scenarios h2 {
-            font-size: clamp(26px, 3.2vw, 42px);
+            font-size: 42px;
             color: var(--white);
             margin-bottom: 8px;
             text-align: center;
         }
         .slide-scenarios .scn-subtitle {
-            font-size: clamp(13px, 1.2vw, 17px);
+            font-size: 17px;
             color: var(--cloud-blue-80);
             font-weight: 300;
             text-align: center;
@@ -1848,7 +1822,7 @@
             padding: 5px 12px;
             background: rgba(6,106,254,0.2);
             border-radius: 999px;
-            font-size: clamp(10px, 0.9vw, 12px);
+            font-size: 12px;
             font-weight: 700;
             color: var(--cloud-blue-68);
             text-transform: uppercase;
@@ -1858,19 +1832,19 @@
             padding: 5px 12px;
             background: rgba(144,80,233,0.15);
             border-radius: 999px;
-            font-size: clamp(10px, 0.9vw, 12px);
+            font-size: 12px;
             font-weight: 700;
             color: var(--violet);
         }
         .scenario-card-title {
             font-family: 'Salesforce Sans', sans-serif;
-            font-size: clamp(14px, 1.3vw, 19px);
+            font-size: 19px;
             font-weight: 700;
             color: var(--white);
             margin-bottom: 8px;
         }
         .scenario-card-flow {
-            font-size: clamp(12px, 1.1vw, 15px);
+            font-size: 15px;
             color: var(--cloud-blue-80);
             line-height: 1.5;
             margin-bottom: 12px;
@@ -1880,7 +1854,7 @@
             background: rgba(0,179,255,0.08);
             border: 1px solid rgba(0,179,255,0.35);
             border-radius: 8px;
-            font-size: clamp(11px, 1vw, 14px);
+            font-size: 14px;
             font-weight: 600;
             color: var(--white);
             box-shadow: 0 0 12px rgba(0,179,255,0.2), inset 0 0 8px rgba(0,179,255,0.06);
@@ -1900,13 +1874,13 @@
             gap: 20px;
         }
         .slide-tco h2 {
-            font-size: clamp(26px, 3.2vw, 42px);
+            font-size: 42px;
             color: var(--white);
             margin-bottom: 0;
             text-align: center;
         }
         .slide-tco .tco-subtitle {
-            font-size: clamp(13px, 1.2vw, 17px);
+            font-size: 17px;
             color: var(--cloud-blue-80);
             font-weight: 300;
             text-align: center;
@@ -1939,24 +1913,24 @@
         }
         .tco-proof-card-value {
             font-family: 'AvantGarde', sans-serif;
-            font-size: clamp(32px, 3.5vw, 52px);
+            font-size: 52px;
             color: var(--cloud-blue-68);
             line-height: 1;
         }
         .tco-proof-card-unit {
-            font-size: clamp(12px, 1.1vw, 16px);
+            font-size: 16px;
             font-weight: 700;
             color: var(--white);
         }
         .tco-proof-card-desc {
-            font-size: clamp(12px, 1.1vw, 15px);
+            font-size: 15px;
             color: var(--cloud-blue-80);
             line-height: 1.5;
             flex: 1;
         }
         .tco-proof-card-source {
             display: block;
-            font-size: clamp(9px, 0.8vw, 11px);
+            font-size: 11px;
             color: var(--white);
             font-style: italic;
             line-height: 1.3;
@@ -1978,17 +1952,17 @@
         }
         .tco-item-value {
             font-family: 'AvantGarde', sans-serif;
-            font-size: clamp(18px, 2vw, 28px);
+            font-size: 28px;
             color: var(--cloud-blue-68);
             margin-bottom: 4px;
         }
         .tco-item-label {
-            font-size: clamp(9px, 0.9vw, 12px);
+            font-size: 12px;
             color: var(--cloud-blue-80);
         }
         .tco-source {
             text-align: center;
-            font-size: clamp(8px, 0.7vw, 10px);
+            font-size: 10px;
             color: var(--gray-60);
             font-style: italic;
         }
@@ -2003,13 +1977,13 @@
             height: 100%;
         }
         .slide-governance h2 {
-            font-size: clamp(22px, 2.8vw, 36px);
+            font-size: 36px;
             color: var(--white);
             text-align: center;
             margin-bottom: 0;
         }
         .slide-governance .gov-subtitle {
-            font-size: clamp(11px, 1vw, 14px);
+            font-size: 14px;
             color: var(--cloud-blue-80);
             text-align: center;
             font-weight: 300;
@@ -2045,7 +2019,7 @@
             overflow: hidden;
         }
         .gov-panel-title {
-            font-size: clamp(10px, 0.9vw, 12px);
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -2073,12 +2047,12 @@
             flex-shrink: 0;
         }
         .gov-trust-item-text {
-            font-size: clamp(10px, 0.85vw, 12px);
+            font-size: 12px;
             color: var(--white);
             font-weight: 500;
         }
         .gov-trust-item-desc {
-            font-size: clamp(9px, 0.7vw, 10px);
+            font-size: 10px;
             color: var(--cloud-blue-80);
             margin-top: 1px;
         }
@@ -2102,12 +2076,12 @@
             justify-content: center;
         }
         .gov-matrix-cell-name {
-            font-size: clamp(8px, 0.7vw, 10px);
+            font-size: 10px;
             color: var(--white);
             font-weight: 600;
         }
         .gov-matrix-cell-oilgas {
-            font-size: clamp(7px, 0.6vw, 9px);
+            font-size: 9px;
             color: var(--cloud-blue-80);
             margin-top: 2px;
         }
@@ -2146,13 +2120,13 @@
             background: var(--cloud-blue-68);
         }
         .gov-autonomy-name {
-            font-size: clamp(9px, 0.8vw, 11px);
+            font-size: 11px;
             color: var(--white);
             font-weight: 600;
             flex: 1;
         }
         .gov-autonomy-human {
-            font-size: clamp(8px, 0.7vw, 10px);
+            font-size: 10px;
             color: var(--cloud-blue-80);
         }
         .gov-failures {
@@ -2171,7 +2145,7 @@
         }
         .gov-failure-score {
             font-family: 'AvantGarde', sans-serif;
-            font-size: clamp(11px, 1vw, 14px);
+            font-size: 14px;
             color: var(--orange);
             font-weight: 700;
             flex-shrink: 0;
@@ -2179,12 +2153,12 @@
             text-align: center;
         }
         .gov-failure-name {
-            font-size: clamp(9px, 0.8vw, 11px);
+            font-size: 11px;
             color: var(--white);
             flex: 1;
         }
         .gov-failure-cost {
-            font-size: clamp(8px, 0.7vw, 10px);
+            font-size: 10px;
             color: var(--orange);
             flex-shrink: 0;
         }
@@ -2202,17 +2176,17 @@
         }
         .gov-stat-value {
             font-family: 'AvantGarde', sans-serif;
-            font-size: clamp(14px, 1.5vw, 20px);
+            font-size: 20px;
             color: var(--cloud-blue-68);
         }
         .gov-stat-label {
-            font-size: clamp(7px, 0.6vw, 9px);
+            font-size: 9px;
             color: var(--cloud-blue-80);
             margin-top: 1px;
         }
         .gov-source {
             text-align: center;
-            font-size: clamp(8px, 0.7vw, 10px);
+            font-size: 10px;
             color: var(--white);
             font-style: italic;
         }
@@ -2231,14 +2205,14 @@
             justify-content: center;
         }
         .slide-cta h2 {
-            font-size: clamp(48px, 7vw, 96px);
+            font-size: 96px;
             color: var(--white);
             line-height: 1.08;
             margin-bottom: 24px;
             letter-spacing: -0.02em;
         }
         .slide-cta .cta-headline {
-            font-size: clamp(20px, 2.5vw, 36px);
+            font-size: 36px;
             color: var(--white);
             line-height: 1.35;
             margin-bottom: 32px;
@@ -2246,13 +2220,13 @@
             max-width: 700px;
         }
         .slide-cta p {
-            font-size: clamp(15px, 1.5vw, 20px);
+            font-size: 20px;
             color: rgba(255,255,255,0.7);
             margin-bottom: 24px;
             line-height: 1.5;
         }
         .slide-cta .doctrine {
-            font-size: clamp(11px, 1.1vw, 14px);
+            font-size: 14px;
             letter-spacing: 0.18em;
             color: var(--cloud-blue-68);
             margin-bottom: 32px;
@@ -2313,133 +2287,6 @@
         .sparkle:nth-child(2n) { animation-duration: 5s; animation-delay: -1s; }
         .sparkle:nth-child(3n) { animation-duration: 3.5s; animation-delay: -2s; }
         .sparkle:nth-child(4n) { animation-duration: 4.5s; animation-delay: -0.5s; }
-
-        /* === RESPONSIVE: SHORT VIEWPORTS (browser chrome eats ~130px) === */
-        @media (max-height: 860px) {
-            .slide { padding: 20px 48px; }
-            .slide h2 { margin-bottom: 6px !important; }
-            .slide-problems .subtitle-line { margin-bottom: 10px; }
-            .slide-before-after .ba-subtitle { margin-bottom: 12px; }
-            .headless-visual { margin-bottom: 12px; }
-            .headless-core { padding: 14px 12px; }
-            .headless-core-item { padding: 4px 0; }
-            .headless-surface { padding: 8px 12px; }
-            .headless-surface-preview { padding: 4px 8px; margin-top: 4px; }
-            .ba-card-body { padding: 10px 14px; }
-            .ba-row { margin-bottom: 6px; }
-            .ba-divider { margin: 6px 0; }
-            .vibe-stage { padding: 14px 12px; }
-            .vibe-footer { padding: 12px 20px; }
-            .vibe-usecase { padding: 12px 14px; }
-            .arch-explainer-layer { padding: 8px 12px; }
-            .arch-explainer-quote { padding: 10px 12px; font-size: 11px; }
-            .int-check-item { padding: 8px 12px; }
-            .int-checklist-quote { padding: 10px 12px; font-size: 11px; }
-            .problem-card { padding: 16px 18px; }
-            .problem-card .problem-icon { margin-bottom: 6px; height: 28px; }
-            .problem-card .problem-icon img { height: 28px; }
-            .sec-card { padding: 14px 16px; }
-            .sec-card-icon { margin-bottom: 8px; height: 32px; }
-            .sec-card-icon img { height: 28px; }
-            .sec-comparison { margin-top: 12px; }
-            .sec-comp-box { padding: 14px 16px; }
-            .tco-box { padding: 14px 16px; }
-            .tco-breakdown { gap: 10px; }
-            .tco-item { padding: 10px; }
-            .tco-proof-section { padding-top: 10px; }
-            .tco-proof-card { padding: 10px 10px; }
-            .scenario-card { padding: 14px 16px; }
-            .scenario-card-header { margin-bottom: 8px; }
-            .scenario-card-flow { margin-bottom: 8px; }
-            .slide-vibe .content { gap: 14px; }
-            .slide-tco .content { gap: 12px; }
-        }
-
-        @media (max-height: 750px) {
-            .slide { padding: 16px 40px; }
-            .arch-explainer-layer-desc { font-size: 11px; line-height: 1.35; }
-            .int-check-desc { font-size: 11px; line-height: 1.35; }
-            .problem-card .problem-desc { font-size: 12px; }
-            .ba-examples { gap: 10px; }
-            .headless-visual { grid-template-columns: 160px 40px 1fr; }
-        }
-
-        /* === RESPONSIVE: SLIDES === */
-        @media (max-width: 1200px) {
-            .slide { padding: clamp(20px, 3vh, 32px) 48px; }
-            .ba-examples { grid-template-columns: 1fr 1fr; gap: 12px; }
-            .headless-visual { grid-template-columns: 180px 50px 1fr; }
-            .problems-grid { grid-template-columns: 1fr 1fr; }
-            .scenarios-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-            .tco-comparison { gap: 20px; }
-        }
-
-        @media (max-width: 900px) {
-            .slide { padding: clamp(16px, 2.5vh, 24px) 32px; }
-            .slide-before-after .content { max-width: 100%; }
-            .headless-visual {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-            .headless-core {
-                display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
-                padding: 14px 20px;
-            }
-            .headless-core-label { margin-bottom: 0; }
-            .headless-core-item { border-bottom: none; padding: 4px 8px; }
-            .headless-connector {
-                flex-direction: row; gap: 0;
-            }
-            .headless-connector-line {
-                width: 2px; height: 20px;
-                background: linear-gradient(180deg, rgba(6,106,254,0.6), rgba(46,132,74,0.8));
-            }
-            .headless-connector-line::after {
-                content: '▾'; right: auto; top: auto; bottom: -6px; left: -3px;
-            }
-            .ba-examples { grid-template-columns: 1fr; }
-            .problems-grid { grid-template-columns: 1fr 1fr; }
-            .scenarios-grid { grid-template-columns: 1fr; }
-            .arch-split { flex-direction: column; gap: 16px; }
-            .arch-explainer { width: 100%; min-width: unset; }
-            .int-split { flex-direction: column; gap: 16px; }
-            .int-checklist { width: 100%; min-width: unset; }
-        }
-
-        @media (max-width: 768px) {
-            .slide { padding: 24px 20px; }
-            .slide h2 { font-size: clamp(20px, 4vw, 28px) !important; }
-            .problems-grid { grid-template-columns: 1fr; gap: 10px; }
-            .problem-card { padding: 14px 16px; }
-            .problem-card .problem-desc { font-size: 11px; }
-            .problem-card .problem-example { font-size: 10px; }
-            .ba-card-header { padding: 8px 14px; font-size: 11px; }
-            .ba-card-body { padding: 12px 14px; }
-            .ba-text { font-size: 10px; }
-            .scenario-card { padding: 16px; }
-            .scenario-card-title { font-size: 14px; }
-            .scenario-card-flow { font-size: 11px; }
-            .arch-split { flex-direction: column; }
-            .arch-explainer { width: 100%; }
-            .arch-diagram-col { width: 100%; }
-            .headless-surface { padding: 10px 12px; }
-            .headless-surface-preview { font-size: 10px; }
-            .tco-comparison { grid-template-columns: 1fr; gap: 16px; }
-        }
-
-        @media (max-width: 480px) {
-            .slide { padding: 20px 16px; }
-            .headless-surfaces { gap: 8px; }
-            .headless-surface-icon { width: 28px; height: 28px; }
-            .scenario-card-flow { display: none; }
-            .arch-explainer-layer-desc { display: none; }
-            .nav-btn { width: 36px; height: 36px; }
-            #nav-prev { left: 8px; }
-            #nav-next { right: 8px; }
-            .nav-btn svg { width: 18px; height: 18px; }
-            .top-nav { top: 12px; right: 16px; }
-            .lang-btn { width: 30px; height: 30px; font-size: 10px; }
-        }
 
         @media (prefers-reduced-motion: reduce) {
             * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -2539,7 +2386,7 @@
             width: 100%;
         }
         .scenario-back-btn {
-            position: fixed;
+            position: absolute;
             top: 28px;
             left: 40px;
             z-index: 100;
@@ -2579,7 +2426,7 @@
         .modal-badge-channel { background: rgba(144,80,233,0.08); color: var(--violet); }
         .modal-badge-industry { background: rgba(46,132,74,0.08); color: var(--green); }
         .modal-header h2 {
-            font-size: clamp(28px, 4vw, 44px);
+            font-size: 44px;
             color: var(--electric-blue-15);
             margin-bottom: 12px;
             line-height: 1.1;
@@ -2868,133 +2715,14 @@
             color: var(--gray-40);
         }
 
-        /* Scenario Slide Responsiveness */
-        @media (max-width: 1024px) {
-            .slide-scenario .scenario-slide-inner {
-                padding: 40px 40px 60px;
-            }
-            .modal-journey {
-                flex-wrap: wrap;
-                gap: 16px;
-            }
-            .modal-journey::before {
-                display: none;
-            }
-            .journey-step {
-                flex: 0 0 calc(33.33% - 12px);
-                margin-bottom: 16px;
-            }
-            .modal-tools {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .slide-scenario .scenario-slide-inner {
-                padding: 24px 20px 40px;
-            }
-            .scenario-back-btn {
-                top: 16px;
-                left: 16px;
-                padding: 8px 14px;
-                font-size: 12px;
-            }
-            .modal-header h2 {
-                font-size: 22px;
-            }
-            .modal-header p {
-                font-size: 14px;
-            }
-            .journey-step {
-                flex: 0 0 calc(50% - 8px);
-            }
-            .modal-tools {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-            .modal-tool {
-                padding: 14px 12px;
-            }
-            .modal-layers {
-                gap: 6px;
-            }
-            .modal-layer {
-                padding: 10px 14px;
-                gap: 10px;
-            }
-            .modal-layer-title {
-                font-size: 12px;
-            }
-            .modal-layer-detail {
-                font-size: 10px;
-            }
-            .modal-result {
-                grid-template-columns: 1fr;
-                gap: 16px;
-                padding: 18px 20px;
-            }
-            .modal-result-item-value {
-                font-size: 22px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .scenario-modal-inner {
-                padding: 20px 16px 32px;
-            }
-            .modal-header-badges {
-                flex-wrap: wrap;
-                gap: 6px;
-            }
-            .journey-step {
-                flex: 0 0 100%;
-            }
-            .modal-tools {
-                grid-template-columns: 1fr 1fr;
-            }
-            .modal-layer-detail {
-                display: none;
-            }
-        }
-
-        /* Make modal fit within viewport without external scroll */
-        @media (max-height: 800px) {
-            .scenario-modal-inner {
-                padding: 32px 40px 40px;
-            }
-            .modal-section {
-                margin-bottom: 24px;
-            }
-            .modal-header {
-                margin-bottom: 24px;
-            }
-            .modal-header h2 {
-                font-size: 24px;
-            }
-            .journey-step-dot {
-                width: 28px;
-                height: 28px;
-                font-size: 11px;
-            }
-            .modal-tool {
-                padding: 12px 10px;
-            }
-            .modal-tool-icon {
-                font-size: 18px;
-                margin-bottom: 4px;
-            }
-            .modal-layer {
-                padding: 10px 14px;
-            }
-            .modal-result-item-value {
-                font-size: 22px;
-            }
-        }
     </style>
 </head>
 <body>
 
-    <!-- FIXED UI -->
+    <!-- DECK -->
+    <div id="deck">
+
+    <!-- FIXED UI (inside #deck for scaling) -->
     <div class="deck-logo" id="deck-logo">
         <img src="assets/logos/Salesforce Cloud - Primary.svg" alt="Salesforce" class="deck-logo-dark" style="height:36px">
         <img src="assets/logos/Salesforce Cloud - Inverted.svg" alt="Salesforce" class="deck-logo-light" style="height:36px">
@@ -3015,9 +2743,6 @@
         <div class="lang-btn active" id="btn-pt" onclick="setLang('pt')">PT</div>
         <div class="lang-btn" id="btn-en" onclick="setLang('en')">EN</div>
     </div>
-
-    <!-- DECK -->
-    <div id="deck">
 
         <!-- SLIDE 1: TÍTULO -->
         <section class="slide active slide-title bg-evening">
@@ -4938,8 +4663,6 @@
             </div>
         </section>
 
-    </div>
-
     <!-- NAVIGATION ARROWS -->
     <button class="nav-btn" id="nav-prev" onclick="navigate(-1)" aria-label="Slide anterior">
         <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
@@ -4954,7 +4677,22 @@
         <span data-i18n="back-btn">Voltar aos Cenários</span>
     </button>
 
+    </div>
+
     <script>
+    // --- DECK SCALING: fixed 1440x810 canvas scaled to fit viewport ---
+    (function() {
+        const deck = document.getElementById('deck');
+        const BASE_W = 1440, BASE_H = 810;
+        function scaleDeck() {
+            const vw = window.innerWidth, vh = window.innerHeight;
+            const scale = Math.min(vw / BASE_W, vh / BASE_H);
+            deck.style.transform = 'scale(' + scale + ')';
+        }
+        scaleDeck();
+        window.addEventListener('resize', scaleDeck);
+    })();
+
     // --- NAVIGATION ---
     let current = 0;
     const slides = document.querySelectorAll('.slide');
