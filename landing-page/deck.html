@@ -274,59 +274,60 @@
         }
         .quick-nav-overlay {
             position: absolute;
-            inset: 0;
-            background: rgba(0,11,46,0.88);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            bottom: 76px;
+            left: 36px;
+            width: 280px;
+            max-height: 520px;
+            overflow-y: auto;
+            background: rgba(0,11,46,0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(6,106,254,0.3);
+            border-radius: 14px;
+            padding: 12px;
             z-index: 1050;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.3s;
+            transform: translateY(8px) scale(0.95);
+            transition: opacity 0.25s, transform 0.25s cubic-bezier(0.4,0,0.2,1);
         }
         .quick-nav-overlay.open {
             opacity: 1;
             pointer-events: all;
+            transform: translateY(0) scale(1);
         }
         .quick-nav-list {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            max-width: 600px;
-            width: 90%;
+            gap: 4px;
         }
         .quick-nav-item {
             display: flex;
             align-items: center;
-            gap: 14px;
-            padding: 14px 20px;
-            border-radius: 12px;
-            background: rgba(6,106,254,0.08);
-            border: 1px solid rgba(6,106,254,0.2);
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: transparent;
+            border: none;
             cursor: pointer;
-            transition: background 0.2s, border-color 0.2s, transform 0.15s;
+            transition: background 0.15s;
         }
         .quick-nav-item:hover {
             background: rgba(6,106,254,0.2);
-            border-color: rgba(6,106,254,0.5);
-            transform: translateX(4px);
         }
         .quick-nav-item.is-current {
-            border-color: var(--cloud-blue-68);
-            background: rgba(0,179,255,0.12);
+            background: rgba(0,179,255,0.15);
         }
         .quick-nav-item-num {
             font-family: 'AvantGarde', sans-serif;
-            font-size: 14px;
+            font-size: 11px;
             color: var(--cloud-blue-68);
-            width: 24px;
+            width: 20px;
             text-align: center;
             flex-shrink: 0;
         }
         .quick-nav-item-title {
-            font-size: 15px;
+            font-size: 12px;
             font-weight: 600;
             color: var(--white);
             flex: 1;
