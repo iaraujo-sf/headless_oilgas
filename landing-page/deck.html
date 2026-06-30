@@ -276,15 +276,13 @@
             position: absolute;
             bottom: 76px;
             left: 36px;
-            width: 280px;
-            max-height: 520px;
-            overflow-y: auto;
+            width: 300px;
             background: rgba(0,11,46,0.92);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(6,106,254,0.3);
             border-radius: 14px;
-            padding: 12px;
+            padding: 10px;
             z-index: 1050;
             opacity: 0;
             pointer-events: none;
@@ -4760,11 +4758,14 @@
         'Governança Profunda: IA + Headless',
         'Obrigado'
     ];
+    const quickNavSkip = new Set([0, 1, 13]);
     (function buildQuickNav() {
         const list = document.getElementById('quickNavList');
         quickNavTitles.forEach((title, i) => {
+            if (quickNavSkip.has(i)) return;
             const item = document.createElement('div');
             item.className = 'quick-nav-item';
+            item.dataset.slideIdx = i;
             item.innerHTML = `<span class="quick-nav-item-num">${String(i + 1).padStart(2, '0')}</span><span class="quick-nav-item-title">${title}</span>`;
             item.onclick = function() { goTo(i); closeQuickNav(); };
             list.appendChild(item);
@@ -4782,8 +4783,8 @@
         const btn = document.getElementById('quickNavBtn');
         overlay.classList.add('open');
         btn.classList.add('active');
-        document.querySelectorAll('.quick-nav-item').forEach((item, i) => {
-            item.classList.toggle('is-current', i === current);
+        document.querySelectorAll('.quick-nav-item').forEach(item => {
+            item.classList.toggle('is-current', parseInt(item.dataset.slideIdx) === current);
         });
     }
     function closeQuickNav() {
