@@ -2801,23 +2801,18 @@
                         <span class="agenda-item-title" data-i18n="agenda-5">Integração com legado (SAP, ERPs)</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
-                    <div class="agenda-item slide-el slide-el-delay-3" onclick="goToSlideByClass('slide-vibe')">
-                        <span class="agenda-item-num">07</span>
-                        <span class="agenda-item-title" data-i18n="agenda-6">Vibe Code: descreva, a plataforma constrói</span>
-                        <span class="agenda-item-arrow">→</span>
-                    </div>
                     <div class="agenda-item slide-el slide-el-delay-3" onclick="goToSlideByClass('slide-slack')">
-                        <span class="agenda-item-num">08</span>
+                        <span class="agenda-item-num">07</span>
                         <span class="agenda-item-title" data-i18n="agenda-7">Slack: cockpit único da operação</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-4" onclick="goToSlideByClass('slide-security')">
-                        <span class="agenda-item-num">09</span>
+                        <span class="agenda-item-num">08</span>
                         <span class="agenda-item-title" data-i18n="agenda-8">Segurança & Governança</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-5" onclick="goToSlideByClass('slide-governance')">
-                        <span class="agenda-item-num">10</span>
+                        <span class="agenda-item-num">09</span>
                         <span class="agenda-item-title" data-i18n="agenda-11">Governança Profunda: IA + Headless</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
@@ -3631,7 +3626,7 @@
         </section>
 
         <!-- SLIDE 7: DESENVOLVIMENTO RÁPIDO -->
-        <section class="slide slide-vibe bg-dusk">
+        <section class="slide slide-vibe slide-hidden bg-dusk">
             <img src="assets/sparkles/Sparkles Yellow Main.svg" class="sparkle" style="top:8%;left:4%;width:52px;transform:rotate(-8deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Blue Inclined.svg" class="sparkle" style="top:14%;right:3%;width:44px;transform:rotate(16deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Yellow Inclined 2.svg" class="sparkle" style="bottom:12%;left:3%;width:40px;transform:rotate(20deg)" aria-hidden="true">
@@ -5066,13 +5061,12 @@
         'Pricing Dinâmico',
         '3 Perfis de Adoção',
         'Integração com legado (SAP, ERPs)',
-        'Vibe Code',
         'Slack: cockpit único da operação',
         'Segurança & Governança',
         'Governança Profunda: IA + Headless',
         'Obrigado'
     ];
-    const quickNavSkip = new Set([0, 1, 14]);
+    const quickNavSkip = new Set([0, 1, 13]);
     (function buildQuickNav() {
         const list = document.getElementById('quickNavList');
         quickNavTitles.forEach((title, i) => {
