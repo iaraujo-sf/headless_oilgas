@@ -1682,11 +1682,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            flex: 1;
             min-height: 0;
         }
         .sec-card {
-            padding: 20px 22px;
+            padding: 28px 26px;
             border-radius: 14px;
             background: rgba(0,30,91,0.5);
             border: 1px solid rgba(6,106,254,0.3);
@@ -2792,38 +2791,33 @@
                         <span class="agenda-item-title" data-i18n="agenda-4">Arquitetura Composável: 4 Camadas</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
-                    <div class="agenda-item slide-el slide-el-delay-3" onclick="goToSlideByClass('slide-integration')">
+                    <div class="agenda-item slide-el slide-el-delay-2" onclick="goToSlideByClass('slide-superagents')">
                         <span class="agenda-item-num">05</span>
+                        <span class="agenda-item-title" data-i18n="agenda-sa">Superagents: velocidade, margem e controle</span>
+                        <span class="agenda-item-arrow">→</span>
+                    </div>
+                    <div class="agenda-item slide-el slide-el-delay-3" onclick="goToSlideByClass('slide-integration')">
+                        <span class="agenda-item-num">06</span>
                         <span class="agenda-item-title" data-i18n="agenda-5">Integração com legado (SAP, ERPs)</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-3" onclick="goToSlideByClass('slide-vibe')">
-                        <span class="agenda-item-num">06</span>
+                        <span class="agenda-item-num">07</span>
                         <span class="agenda-item-title" data-i18n="agenda-6">Vibe Code: descreva, a plataforma constrói</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-3" onclick="goToSlideByClass('slide-slack')">
-                        <span class="agenda-item-num">07</span>
+                        <span class="agenda-item-num">08</span>
                         <span class="agenda-item-title" data-i18n="agenda-7">Slack: cockpit único da operação</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
                     <div class="agenda-item slide-el slide-el-delay-4" onclick="goToSlideByClass('slide-security')">
-                        <span class="agenda-item-num">08</span>
+                        <span class="agenda-item-num">09</span>
                         <span class="agenda-item-title" data-i18n="agenda-8">Segurança & Governança</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
-                    <div class="agenda-item slide-el slide-el-delay-4" onclick="goToSlideByClass('slide-scenarios')">
-                        <span class="agenda-item-num">09</span>
-                        <span class="agenda-item-title" data-i18n="agenda-9">Dores reais, caminhos concretos</span>
-                        <span class="agenda-item-arrow">→</span>
-                    </div>
-                    <div class="agenda-item slide-el slide-el-delay-5" onclick="goToSlideByClass('slide-tco')">
-                        <span class="agenda-item-num">10</span>
-                        <span class="agenda-item-title" data-i18n="agenda-10">Customer Success: quem já opera Headless</span>
-                        <span class="agenda-item-arrow">→</span>
-                    </div>
                     <div class="agenda-item slide-el slide-el-delay-5" onclick="goToSlideByClass('slide-governance')">
-                        <span class="agenda-item-num">11</span>
+                        <span class="agenda-item-num">10</span>
                         <span class="agenda-item-title" data-i18n="agenda-11">Governança Profunda: IA + Headless</span>
                         <span class="agenda-item-arrow">→</span>
                     </div>
@@ -3274,59 +3268,62 @@
         </section>
 
         <!-- SLIDE 5.1: AGENTFORCE SUPERAGENTS -->
-        <section class="slide bg-midnight">
+        <section class="slide slide-superagents bg-midnight">
             <img src="assets/sparkles/Sparkles Yellow Main.svg" class="sparkle" style="top:10%;left:5%;width:64px;transform:rotate(-12deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Blue Main.svg" class="sparkle" style="top:15%;right:4%;width:52px;transform:rotate(15deg)" aria-hidden="true">
 
             <div class="content" style="text-align: center;">
-                <span class="badge badge-violet" data-i18n="superagent-badge">Agentforce 360</span>
-                <h2 class="slide-el" style="font-size: 42px; line-height: 1.1; margin-bottom: 8px;" data-i18n="superagent-title">Agentforce Superagents: O Orquestrador Inteligente da Sua Força de Trabalho AI</h2>
-                <p class="slide-subtitle slide-el slide-el-delay-1" style="font-size: 18px; opacity: 0.85; margin-bottom: 32px;" data-i18n="superagent-subtitle">
-                    Unifique múltiplos agents especializados em uma única experiência de cliente coordenada — rodando na única plataforma enterprise com governança nativa
+                <span class="badge badge-violet" data-i18n="superagent-badge">Agentforce Superagents</span>
+                <h2 class="slide-el" style="font-size: 40px; line-height: 1.1; margin-bottom: 8px;" data-i18n="superagent-title">Um único agente atende o cliente.<br>Você ganha velocidade, margem e controle.</h2>
+                <p class="slide-subtitle slide-el slide-el-delay-1" style="font-size: 17px; opacity: 0.85; margin-bottom: 24px;" data-i18n="superagent-subtitle">
+                    O Superagent coordena pricing, supply e crédito por trás de uma única conversa — e cada resposta já sai dentro da sua política comercial
                 </p>
 
                 <div class="slide-el slide-el-delay-2" style="margin-top: 0;">
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px;">
-                        <div style="background: linear-gradient(135deg, rgba(6,106,254,0.15), rgba(0,179,255,0.15)); padding: 16px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 32px; margin-bottom: 8px;">👤</div>
-                            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--cloud-blue-68);">Cliente solicita</h4>
-                            <p style="font-size: 12px; opacity: 0.85;">"Preciso cotação para 50mil litros diesel"</p>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px;">
+                        <div style="background: linear-gradient(135deg, rgba(6,106,254,0.15), rgba(0,179,255,0.15)); padding: 14px 12px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 26px; margin-bottom: 6px;">👤</div>
+                            <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--cloud-blue-68);" data-i18n="sa-s1-t">Cliente pede</h4>
+                            <p style="font-size: 12px; opacity: 0.85;" data-i18n="sa-s1-d">“50 mil litros de diesel S10 para sexta”</p>
                         </div>
-                        <div style="background: linear-gradient(135deg, rgba(144,80,233,0.15), rgba(255,83,138,0.15)); padding: 16px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 32px; margin-bottom: 8px;">🤖</div>
-                            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--violet);">Superagent coordena</h4>
-                            <p style="font-size: 12px; opacity: 0.85;">Roteia para specialists</p>
+                        <div style="background: linear-gradient(135deg, rgba(144,80,233,0.15), rgba(255,83,138,0.15)); padding: 14px 12px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 26px; margin-bottom: 6px;">🤖</div>
+                            <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--violet);" data-i18n="sa-s2-t">Superagent entende</h4>
+                            <p style="font-size: 12px; opacity: 0.85;" data-i18n="sa-s2-d">Quebra o pedido e aciona os especialistas</p>
                         </div>
-                        <div style="background: linear-gradient(135deg, rgba(221,122,1,0.15), rgba(46,132,74,0.15)); padding: 16px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 32px; margin-bottom: 8px;">⚙️</div>
-                            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--orange);">Agents executam</h4>
-                            <p style="font-size: 12px; opacity: 0.85;">Pricing + Supply + Credit</p>
+                        <div style="background: linear-gradient(135deg, rgba(221,122,1,0.15), rgba(46,132,74,0.15)); padding: 14px 12px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 26px; margin-bottom: 6px;">⚙️</div>
+                            <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--orange);" data-i18n="sa-s3-t">Especialistas checam</h4>
+                            <p style="font-size: 12px; opacity: 0.85;" data-i18n="sa-s3-d">Preço, disponibilidade na base e limite de crédito</p>
                         </div>
-                        <div style="background: linear-gradient(135deg, rgba(46,132,74,0.15), rgba(6,106,254,0.15)); padding: 16px; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 32px; margin-bottom: 8px;">✅</div>
-                            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--green);">Resposta unificada</h4>
-                            <p style="font-size: 12px; opacity: 0.85;">Cotação instantânea</p>
+                        <div style="background: linear-gradient(135deg, rgba(46,132,74,0.15), rgba(6,106,254,0.15)); padding: 14px 12px; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 26px; margin-bottom: 6px;">✅</div>
+                            <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--green);" data-i18n="sa-s4-t">Cotação pronta</h4>
+                            <p style="font-size: 12px; opacity: 0.85;" data-i18n="sa-s4-d">Na mesma conversa, já aprovada e rastreável</p>
                         </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
-                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; border-left: 4px solid var(--cloud-blue-68);">
-                            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--cloud-blue-68);">One Agent, Any Channel</h4>
-                            <p style="font-size: 13px; line-height: 1.5; opacity: 0.85;">
-                                Implante um Superagent como "porta de entrada" em web, mobile, WhatsApp, Slack
-                            </p>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: left;">
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; border-top: 4px solid var(--cloud-blue-68); display: flex; flex-direction: column; gap: 10px;">
+                            <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6;" data-i18n="sa-what">O que faz</p>
+                            <p style="font-size: 13px; line-height: 1.45; opacity: 0.85;" data-i18n="sa-c1-cap"><strong style="color: var(--cloud-blue-68);">Um agente, qualquer canal.</strong> Atende TRR, frotista e revendedor no WhatsApp, portal, Slack ou Claude — com o mesmo contexto.</p>
+                            <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6;" data-i18n="sa-gain">O que você ganha</p>
+                            <p style="font-size: 16px; font-weight: 700; line-height: 1.35;" data-i18n="sa-c1-ben">Cotação em minutos, não em dias. O pedido não esfria esperando retorno.</p>
+                            <p style="margin-top: auto; font-size: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.8;" data-i18n="sa-c1-kpi">📈 <strong>KPI:</strong> conversão de cotações e tempo de resposta</p>
                         </div>
-                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; border-left: 4px solid var(--violet);">
-                            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--violet);">Coordena Especialistas</h4>
-                            <p style="font-size: 13px; line-height: 1.5; opacity: 0.85;">
-                                Decompõe requisições complexas e roteia automaticamente para agents especializados
-                            </p>
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; border-top: 4px solid var(--violet); display: flex; flex-direction: column; gap: 10px;">
+                            <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6;" data-i18n="sa-what">O que faz</p>
+                            <p style="font-size: 13px; line-height: 1.45; opacity: 0.85;" data-i18n="sa-c2-cap"><strong style="color: var(--violet);">Especialistas coordenados.</strong> Pricing, supply e crédito trabalham em paralelo, com regras da sua política comercial.</p>
+                            <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6;" data-i18n="sa-gain">O que você ganha</p>
+                            <p style="font-size: 16px; font-weight: 700; line-height: 1.35;" data-i18n="sa-c2-ben">Margem protegida em cada litro: sem desconto fora da alçada, sem venda para cliente sem crédito.</p>
+                            <p style="margin-top: auto; font-size: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.8;" data-i18n="sa-c2-kpi">📈 <strong>KPI:</strong> margem por litro e inadimplência</p>
                         </div>
-                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; border-left: 4px solid var(--green);">
-                            <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--green);">Governança Centralizada</h4>
-                            <p style="font-size: 13px; line-height: 1.5; opacity: 0.85;">
-                                Visibilidade total de interações através do Agentforce 360 Platform
-                            </p>
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; border-top: 4px solid var(--green); display: flex; flex-direction: column; gap: 10px;">
+                            <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6;" data-i18n="sa-what">O que faz</p>
+                            <p style="font-size: 13px; line-height: 1.45; opacity: 0.85;" data-i18n="sa-c3-cap"><strong style="color: var(--green);">Governança centralizada.</strong> Cada agente tem identidade própria, permissões e trilha de auditoria no Salesforce Platform.</p>
+                            <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6;" data-i18n="sa-gain">O que você ganha</p>
+                            <p style="font-size: 16px; font-weight: 700; line-height: 1.35;" data-i18n="sa-c3-ben">Escalar IA sem escalar risco: ANP, LGPD e SOX cobertos desde o primeiro dia.</p>
+                            <p style="margin-top: auto; font-size: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.8;" data-i18n="sa-c3-kpi">📈 <strong>KPI:</strong> conformidade e custo de auditoria</p>
                         </div>
                     </div>
                 </div>
@@ -3511,12 +3508,6 @@
                         </div>
                     </div>
 
-                </div>
-
-                <div class="slide-el slide-el-delay-2" style="margin-top: 32px; padding: 20px; background: rgba(6,106,254,0.1); border-radius: 12px; border: 1px solid rgba(6,106,254,0.3); text-align: center;">
-                    <p style="font-size: 14px; opacity: 0.9;">
-                        <strong>Diagrama da arquitetura mostrado anteriormente:</strong> Os 3 perfis convergem para a mesma stack headless + superagents
-                    </p>
                 </div>
             </div>
         </section>
@@ -3851,25 +3842,11 @@
                     </div>
                 </div>
 
-                <div class="sec-comparison slide-el slide-el-delay-3">
-                    <div class="sec-comp-box sec-comp-custom">
-                        <div class="sec-comp-title" data-i18n="s8-comp1-title">Construir do zero</div>
-                        <div class="sec-comp-value">2.74x</div>
-                        <div class="sec-comp-label" data-i18n="s8-comp1-label">mais vulnerabilidades em código gerado por AI</div>
-                        <span class="sec-comp-source" data-i18n="s8-comp1-source">Fonte: Stanford AIRE Report, 2024</span>
-                    </div>
-                    <div class="sec-comp-box sec-comp-platform">
-                        <div class="sec-comp-title" data-i18n="s8-comp2-title">Plataforma Salesforce</div>
-                        <div class="sec-comp-value">0</div>
-                        <div class="sec-comp-label" data-i18n="s8-comp2-label">vulnerabilidades adicionais (governança built-in)</div>
-                        <span class="sec-comp-source" data-i18n="s8-comp2-source">Fonte: Salesforce Trust & Compliance Documentation, 2025</span>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- SLIDE 9: CENÁRIOS RESOLVIDOS -->
-        <section class="slide slide-scenarios bg-evening">
+        <section class="slide slide-scenarios slide-hidden bg-evening">
             <img src="assets/sparkles/Sparkles Blue Main.svg" class="sparkle" style="top:6%;left:3%;width:52px;transform:rotate(-10deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Yellow Inclined 2.svg" class="sparkle" style="top:12%;right:4%;width:44px;transform:rotate(14deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Blue Inclined 2.svg" class="sparkle" style="bottom:10%;left:4%;width:40px;transform:rotate(20deg)" aria-hidden="true">
@@ -3925,7 +3902,7 @@
         </section>
 
         <!-- SLIDE 10: CUSTOMER SUCCESS -->
-        <section class="slide slide-tco bg-dusk">
+        <section class="slide slide-tco slide-hidden bg-dusk">
             <img src="assets/sparkles/Sparkles Yellow Main.svg" class="sparkle" style="top:6%;left:3%;width:44px;transform:rotate(8deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Blue Inclined.svg" class="sparkle" style="top:10%;right:4%;width:40px;transform:rotate(-10deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Yellow Inclined 2.svg" class="sparkle" style="bottom:10%;left:4%;width:36px;transform:rotate(16deg)" aria-hidden="true">
@@ -4221,7 +4198,7 @@
         </section>
 
         <!-- SLIDE: COMO CONTRATAR AIforce HOJE -->
-        <section class="slide bg-evening">
+        <section class="slide slide-licensing slide-hidden bg-evening">
             <img src="assets/sparkles/Sparkles Yellow Inclined 2.svg" class="sparkle" style="top:10%;left:4%;width:48px;transform:rotate(16deg)" aria-hidden="true">
             <img src="assets/sparkles/Sparkles Blue Main.svg" class="sparkle" style="bottom:12%;right:4%;width:52px;transform:rotate(-12deg)" aria-hidden="true">
 
@@ -4320,12 +4297,11 @@
                 <h2 class="slide-el" data-i18n="s11-title">Obrigado.</h2>
                 <p class="cta-headline slide-el slide-el-delay-1" data-i18n="s11-headline">AIforce não é mais uma tela.<br>É o Salesforce em qualquer superfície onde sua operação já trabalha.</p>
                 <p class="doctrine slide-el slide-el-delay-2" data-i18n="s11-doctrine">HUMANOS DIRIGEM · AGENTFORCE EXECUTA · A PLATAFORMA GOVERNA</p>
-                <p class="slide-el slide-el-delay-3" data-i18n="s11-subtitle"><strong>Próximo passo:</strong> Agende 1h com nosso SA para mapear seu caso de uso.<br>Workshop gratuito "Hands On with AIforce" — 2h, hands-on com o Headless Toolkit. Registre seu time.</p>
             </div>
         </section>
 
         <!-- SCENARIO SLIDE 1: VENDEDOR CAMPO -->
-        <section class="slide slide-scenario bg-morning" data-scenario="vendedor">
+        <section class="slide slide-scenario slide-hidden bg-morning" data-scenario="vendedor">
             <div class="scenario-slide-inner">
             <div class="modal-header">
                 <div class="modal-header-badges">
@@ -4496,7 +4472,7 @@
         </section>
 
         <!-- SCENARIO SLIDE 2: GESTOR COMERCIAL -->
-        <section class="slide slide-scenario bg-morning" data-scenario="gestor">
+        <section class="slide slide-scenario slide-hidden bg-morning" data-scenario="gestor">
             <div class="scenario-slide-inner">
             <div class="modal-header">
                 <div class="modal-header-badges">
@@ -4660,7 +4636,7 @@
         </section>
 
         <!-- SCENARIO SLIDE 3: PRICING -->
-        <section class="slide slide-scenario bg-morning" data-scenario="pricing">
+        <section class="slide slide-scenario slide-hidden bg-morning" data-scenario="pricing">
             <div class="scenario-slide-inner">
             <div class="modal-header">
                 <div class="modal-header-badges">
@@ -4826,7 +4802,7 @@
         </section>
 
         <!-- SCENARIO SLIDE 4: LOYALTY -->
-        <section class="slide slide-scenario bg-morning" data-scenario="loyalty">
+        <section class="slide slide-scenario slide-hidden bg-morning" data-scenario="loyalty">
             <div class="scenario-slide-inner">
             <div class="modal-header">
                 <div class="modal-header-badges">
@@ -5029,6 +5005,8 @@
 
     // --- NAVIGATION ---
     let current = 0;
+    // Slides ocultos saem do fluxo (mantidos no HTML para reativação)
+    document.querySelectorAll('.slide.slide-hidden').forEach(s => s.remove());
     const slides = document.querySelectorAll('.slide');
     const total = slides.length;
     const mainTotal = document.querySelectorAll('.slide:not(.slide-scenario)').length;
@@ -5084,16 +5062,17 @@
         'O motor funciona — a última milha',
         'Headless: a plataforma vai até o operador',
         'Arquitetura Composável: 4 Camadas',
+        'Agentforce Superagents',
+        'Pricing Dinâmico',
+        '3 Perfis de Adoção',
         'Integração com legado (SAP, ERPs)',
         'Vibe Code',
         'Slack: cockpit único da operação',
         'Segurança & Governança',
-        'Dores reais, caminhos concretos',
-        'Customer Success',
         'Governança Profunda: IA + Headless',
         'Obrigado'
     ];
-    const quickNavSkip = new Set([0, 1, 13]);
+    const quickNavSkip = new Set([0, 1, 14]);
     (function buildQuickNav() {
         const list = document.getElementById('quickNavList');
         quickNavTitles.forEach((title, i) => {
@@ -5298,6 +5277,7 @@
         's1-doctrine': 'HUMANS LEAD · AGENTS EXECUTE · THE PLATFORM GOVERNS',
         // AGENDA
         'agenda-title': 'Agenda',
+        'agenda-sa': 'Superagents: speed, margin and control',
         'agenda-1': 'What we hear from the largest distributors',
         'agenda-2': 'The engine works — the last mile is the problem',
         'agenda-3': 'Headless: the platform reaches the operator',
@@ -5398,9 +5378,28 @@
         's5-l1-desc': 'Data 360 Zero-Copy: SAP + CRM + external sources unified without ETL',
         's5-quote': '"The 4-layer headless architecture is the reference for all new Salesforce implementations." — TDX 2026',
         // SLIDE 5.1 - AGENTFORCE SUPERAGENTS
-        'superagent-badge': 'Agentforce 360',
-        'superagent-title': 'Superagents: The Intelligent Orchestrator of Your AI Workforce',
-        'superagent-subtitle': 'Unify multiple specialized agents into a single coordinated customer experience',
+        'superagent-badge': 'Agentforce Superagents',
+        'superagent-title': 'One agent serves the customer.<br>You gain speed, margin and control.',
+        'superagent-subtitle': 'The Superagent coordinates pricing, supply and credit behind a single conversation — and every answer already complies with your commercial policy',
+        'sa-s1-t': 'Customer asks',
+        'sa-s1-d': '“50,000 liters of S10 diesel by Friday”',
+        'sa-s2-t': 'Superagent understands',
+        'sa-s2-d': 'Breaks down the request and calls the specialists',
+        'sa-s3-t': 'Specialists check',
+        'sa-s3-d': 'Price, terminal availability and credit limit',
+        'sa-s4-t': 'Quote ready',
+        'sa-s4-d': 'In the same conversation, approved and traceable',
+        'sa-what': 'What it does',
+        'sa-gain': 'What you gain',
+        'sa-c1-cap': '<strong style="color: var(--cloud-blue-68);">One agent, any channel.</strong> Serves resellers, fleets and dealers on WhatsApp, portal, Slack or Claude — with the same context.',
+        'sa-c1-ben': 'Quotes in minutes, not days. Orders don’t go cold waiting for a callback.',
+        'sa-c1-kpi': '📈 <strong>KPI:</strong> quote conversion and response time',
+        'sa-c2-cap': '<strong style="color: var(--violet);">Coordinated specialists.</strong> Pricing, supply and credit work in parallel, following your commercial policy.',
+        'sa-c2-ben': 'Margin protected on every liter: no discounts beyond approval limits, no sales to customers without credit.',
+        'sa-c2-kpi': '📈 <strong>KPI:</strong> margin per liter and bad debt',
+        'sa-c3-cap': '<strong style="color: var(--green);">Centralized governance.</strong> Each agent has its own identity, permissions and audit trail on Salesforce Platform.',
+        'sa-c3-ben': 'Scale AI without scaling risk: ANP, LGPD and SOX covered from day one.',
+        'sa-c3-kpi': '📈 <strong>KPI:</strong> compliance and audit cost',
         // SLIDE 5.2 - PRICING CASE
         'pricing-case-badge': 'Real Use Case',
         'pricing-case-title': 'Dynamic Regional Pricing: 4 Agents, Instant Response',
@@ -5473,12 +5472,6 @@
         's8-c3-desc': 'Every pricing, every approval, every decision: who, when, parameters, result. Exportable and auditable',
         's8-c4-title': 'Agent Guardrails',
         's8-c4-desc': 'Maximum limits, mandatory escalation, human-in-the-loop for critical decisions',
-        's8-comp1-title': 'Custom (no platform)',
-        's8-comp1-label': 'Build everything: auth, audit, FLS, PII, limits, escalation...',
-        's8-comp1-source': '~6 months just for governance layer',
-        's8-comp2-title': 'Salesforce Headless',
-        's8-comp2-label': 'Already included: Trust Layer + FLS + Audit + Guardrails',
-        's8-comp2-source': 'Zero additional code for governance',
         // SLIDE 9
         's9-title': 'Real pain points, concrete paths',
         's9-subtitle': 'Scenarios based on real downstream pain points. Your legacy stays, Data 360 unifies, Agentforce orchestrates — Headless delivers where the user is.',
@@ -5518,7 +5511,6 @@
         's11-title': 'Thank you.',
         's11-headline': 'AIforce is not another screen.<br>It\'s Salesforce on every surface where your operation already works.',
         's11-doctrine': 'HUMANS LEAD · AGENTS EXECUTE · THE PLATFORM GOVERNS',
-        's11-subtitle': '<strong>Next step:</strong> Book 1h with our SA to map your use case.<br>Free workshop "Hands On with AIforce" — 2h, hands-on with the Headless Toolkit. Register your team.',
         // BACK BUTTON
         'back-btn': 'Back to Scenarios',
         // SCENARIO: VENDEDOR
